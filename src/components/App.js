@@ -4,7 +4,7 @@ import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
 import NotFoundPage from "./NotFoundPage";
-import CoursesPage from "./CoursesPage";
+import CoursesPage from "./courses/CoursesPage";
 
 const App = () => {
   return (
