@@ -1,7 +1,7 @@
 import * as types from "./actionTypes";
 import * as courseApi from "../../api/courseApi";
 
-export function loadCoursesSuccess(courses) {
+export function loadCourseSuccess(courses) {
   return { type: types.LOAD_COURSES_SUCCESS, courses };
 }
 
@@ -18,7 +18,7 @@ export function loadCourses() {
     return courseApi
       .getCourses()
       .then((courses) => {
-        dispatch(loadCoursesSuccess(courses));
+        dispatch(loadCourseSuccess(courses));
       })
       .catch((error) => {
         throw error;
@@ -30,7 +30,7 @@ export function saveCourse(course) {
   //eslint-disable-next-line no-unused-vars
   return function (dispatch, getState) {
     return courseApi
-      .saveCourse()
+      .saveCourse(course)
       .then((savedCourse) => {
         course.id
           ? dispatch(updateCourseSuccess(savedCourse))
