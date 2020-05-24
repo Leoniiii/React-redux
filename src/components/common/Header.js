@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Head = () => {
-  const activeStyle = { color: "#f15b2a" };
+const Header = () => {
+  const activeStyle = { color: "#F15B2A" };
   return (
     <nav>
-      <NavLink to="/" exact activeStyle={activeStyle}>
+      <NavLink to="/" activeStyle={activeStyle} exact>
         Home
       </NavLink>
       {" | "}
@@ -20,4 +20,4 @@ const Head = () => {
   );
 };
 
-export default Head;
+export default Header;
